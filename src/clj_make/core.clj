@@ -7,9 +7,10 @@
 
 (defn re-subset [A B] (not (.matchesAnything (.diff A B))))
 
-(defn re-pair [s1 s2] (let [xs ($ List & s1 s2)
-                         [a b] ($/view ($ Regex/compile xs))
-                         [A B] (map snd [a b])] [A B]))
+(defn re-pair [s1 s2] 
+  (let [xs ($ List & s1 s2)
+       [a b] ($/view ($ Regex/compile xs))
+       [A B] (map snd [a b])] [A B]))
 
 (defn str-subset [A B] (apply re-subset (re-pair A B)))
 
