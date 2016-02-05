@@ -1,7 +1,7 @@
 file : (header <'\n'> sangerAndSeq)+ | (header <'\n'>  illumina-1-0AndSeq)+ | (header <'\n'>  illumina-1-3AndSeq)+
-sangerAndSeq : (nt sangerAndSeq nt) | (<'\n'> '+' <'\n'>)
-illumina-1-0AndSeq : (nt illumina-1-0AndSeq illumina-1-0) | (<'\n'> '+' <'\n'>)
-illumina-1-3AndSeq : (nt illumina-1-3AndSeq illumina-1-3) | (<'\n'> '+' <'\n'>)
+sangerAndSeq : (nt sangerAndSeq sanger) | ( nt <'\n'> '+'  <'\n'>  sanger)
+illumina-1-0AndSeq : (nt illumina-1-0AndSeq illumina-1-0) | (nt <'\n'> '+'  <'\n'> illumina-1-0  )
+illumina-1-3AndSeq : (nt illumina-1-3AndSeq illumina-1-3) | ( nt <'\n'> '+' <'\n'> illumina-1-3 )
 sanger: ('!' | '\"' | '#' | '$' | '%' | '&' | '\'' | '(' | ')' | '*' | '+' | ',' | '-' | '.' | '/' | '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | ':' | ';' | '<' | '=' | '>' | '?' | '@' | 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I' | 'J' | 'K' | 'L' | 'M' | 'N' | 'O' | 'P' | 'Q' | 'R' | 'S' | 'T' | 'U' | 'V' | 'W' | 'X' | 'Y' | 'Z' | '[' | '\\' | ']' | '^' | '_' | '`' | 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z' | '{' | '|' | '}')
 illumina-1-0: (';' | '<' | '=' | '>' | '?' | '@' | 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I' | 'J' | 'K' | 'L' | 'M' | 'N' | 'O' | 'P' | 'Q' | 'R' | 'S' | 'T' | 'U' | 'V' | 'W' | 'X' | 'Y' | 'Z' | '[' | '\\' | ']' | '^' | '_' | '`' | 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z' | '{' | '|' | '}')
 illumina-1-3: ('@' | 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I' | 'J' | 'K' | 'L' | 'M' | 'N' | 'O' | 'P' | 'Q' | 'R' | 'S' | 'T' | 'U' | 'V' | 'W' | 'X' | 'Y' | 'Z' | '[' | '\\' | ']' | '^' | '_' | '`' | 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z' | '{' | '|' | '}')
